@@ -1,5 +1,7 @@
-package com.espoch.treeimplementation;
+package com.espoch.treeimplementation.controller;
 
+import com.espoch.treeimplementation.modelo.arbol.ArbolGeneral;
+import com.espoch.treeimplementation.modelo.nodos.Nodo;
 import javafx.fxml.FXML;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;

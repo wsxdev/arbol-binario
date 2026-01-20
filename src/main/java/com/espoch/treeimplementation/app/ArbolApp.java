@@ -1,4 +1,4 @@
-package com.espoch.treeimplementation;
+package com.espoch.treeimplementation.app;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

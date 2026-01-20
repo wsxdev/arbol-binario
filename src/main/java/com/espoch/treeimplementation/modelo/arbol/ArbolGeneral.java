@@ -1,4 +1,6 @@
-package com.espoch.treeimplementation;
+package com.espoch.treeimplementation.modelo.arbol;
+
+import com.espoch.treeimplementation.modelo.nodos.Nodo;
 
 public class ArbolGeneral<L extends Comparable<L>> {
 

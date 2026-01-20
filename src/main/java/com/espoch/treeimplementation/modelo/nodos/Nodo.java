@@ -1,4 +1,4 @@
-package com.espoch.treeimplementation;
+package com.espoch.treeimplementation.modelo.nodos;
 
 public class Nodo<L> {
     public L valor;
