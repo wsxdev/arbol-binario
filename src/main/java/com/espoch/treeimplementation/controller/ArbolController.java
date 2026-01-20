@@ -46,7 +46,7 @@ public class ArbolController {
 
         // Agregar evento de zoom con el scroll del mouse
         scrollPane.addEventFilter(ScrollEvent.ANY, event -> {
-            if (event.isControlDown()) { // Zoom con Ctrl + Scroll
+            if (event.isControlDown()) {
                 double delta = event.getDeltaY();
                 if (delta > 0) {
                     zoomFactor = Math.min(MAX_ZOOM, zoomFactor + ZOOM_SPEED);
@@ -162,7 +162,7 @@ public class ArbolController {
         // Dibujar conexiones
         if (nodo.izquierdo != null) {
             gc.setStroke(Color.web("#34495e"));
-            gc.setLineWidth(2 / zoomFactor); // Mantener grosor visual constante
+            gc.setLineWidth(2 / zoomFactor);
             gc.strokeLine(x, y, x - hGap, y + VERTICAL_GAP);
             dibujarNodo(gc, nodo.izquierdo, x - hGap, y + VERTICAL_GAP, hGap / 2);
         }

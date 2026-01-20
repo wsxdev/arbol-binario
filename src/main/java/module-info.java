@@ -11,7 +11,6 @@ module com.espoch.treeimplementation {
 
     opens com.espoch.treeimplementation to javafx.fxml;
 
-    exports com.espoch.treeimplementation;
     exports com.espoch.treeimplementation.app;
     opens com.espoch.treeimplementation.app to javafx.fxml;
     exports com.espoch.treeimplementation.controller;

@@ -38,7 +38,6 @@ public class ArbolGeneral<L extends Comparable<L>> {
         } else if (comparacion > 0) {
             actual.derecho = insertarRec(actual.derecho, valor);
         }
-        // Si es igual, el tamaño no cambiará
 
         return actual;
     }
