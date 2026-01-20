@@ -12,8 +12,17 @@ public class ArbolGeneral<L extends Comparable<L>> {
         return raiz;
     }
 
-    public void insertar(L valor) {
+    public boolean insertar(L valor) {
+        int tamInicial = contarNodos(raiz);
         raiz = insertarRec(raiz, valor);
+        int tamFinal = contarNodos(raiz);
+        return tamFinal > tamInicial;
+    }
+
+    private int contarNodos(Nodo<L> nodo) {
+        if (nodo == null)
+            return 0;
+        return 1 + contarNodos(nodo.izquierdo) + contarNodos(nodo.derecho);
     }
 
     private Nodo<L> insertarRec(Nodo<L> actual, L valor) {
@@ -27,12 +36,16 @@ public class ArbolGeneral<L extends Comparable<L>> {
         } else if (comparacion > 0) {
             actual.derecho = insertarRec(actual.derecho, valor);
         }
+        // Si es igual, el tamaño no cambiará
 
         return actual;
     }
 
-    public void eliminar(L valor) {
+    public boolean eliminar(L valor) {
+        int tamInicial = contarNodos(raiz);
         raiz = eliminarRec(raiz, valor);
+        int tamFinal = contarNodos(raiz);
+        return tamFinal < tamInicial;
     }
 
     private Nodo<L> eliminarRec(Nodo<L> actual, L valor) {
